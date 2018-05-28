@@ -1,0 +1,8 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="HelloWorld" Height="100" Width="400">
+    <Grid>
+        <Label Name="lblHello" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="200" />
+        <Button Name="btnHello" Content="Button" HorizontalAlignment="Left" Margin="215,13,0,0" VerticalAlignment="Top" Width="75" />
+    </Grid>
+</Window>
