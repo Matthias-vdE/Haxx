@@ -1,7 +1,7 @@
 ﻿#Load the XML file
 .\loadDialog.ps1 -XamlPath "HelloWorld.xaml"
 
-#Event handler
+#Event handlers
 $btnHello.add_Click({
  $lblHello.Content = "Hello World"
 })
