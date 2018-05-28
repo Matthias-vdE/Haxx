@@ -9,6 +9,7 @@ $frmSysInfo.add_Loaded({
 	LoadSystemName
 	LoadSystemManufacturer
 	LoadSystemSKU
+	LoadSystemModel
 })
 
 #Functions
@@ -46,6 +47,12 @@ Function LoadSystemSKU {
 	$SystemWmiObject = Get-WmiObject -Class Win32_ComputerSystem
 	$SystemSKU = $SystemWmiObject.SystemSKUNumber
 	$txtSystemSKU.Text = $SystemSKU
+}
+
+Function LoadSystemModel {
+	$SystemWmiObject = Get-WmiObject -Class Win32_ComputerSystem
+	$SystemModel = $SystemWmiObject.Model
+	$txtModel.Text = $SystemModel
 }
 
 #Show the GUI

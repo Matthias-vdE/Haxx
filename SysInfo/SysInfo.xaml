@@ -18,5 +18,8 @@
         <TextBox Name="txtSystemManufacturer" HorizontalAlignment="Left" Height="23" Margin="115,135,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="200" />
         <Label Name="lblSystemSKU" Content="System SKU" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Width="100" />
         <TextBox Name="txtSystemSKU" HorizontalAlignment="Left" Height="23" Margin="115,163,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="200" />
+        <Label Name="lblModel" Content="Model" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="100" />
+        <TextBox Name="txtModel" HorizontalAlignment="Left" Height="23" Margin="115,191,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="200" />
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Margin="10,220,0,0" Stroke="Black" VerticalAlignment="Top" Width="374" />
     </Grid>
 </Window>
