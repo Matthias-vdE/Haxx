@@ -1,5 +1,7 @@
-﻿#Load the XML file
-.\loadDialog.ps1 -XamlPath "SysInfo.xaml"
+﻿Write-Host $PSScriptRoot
+
+#Load the XML file
+& "$PSScriptRoot\loadDialog.ps1" -XamlPath "$PSScriptRoot\SysInfo.xaml"
 
 #Event handlers
 $frmSysInfo.add_Loaded({
