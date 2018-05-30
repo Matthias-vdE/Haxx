@@ -1,5 +1,5 @@
 ﻿#Load the XML file
-.\loadDialog.ps1 -XamlPath "HelloWorld.xaml"
+& "$PSScriptRoot\loadDialog.ps1" -XamlPath "$PSScriptRoot\HelloWorld.xaml"
 
 #Event handler
 $btnHello.add_Click({
