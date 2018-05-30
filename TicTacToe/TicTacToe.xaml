@@ -1,0 +1,9 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="TicTacToe" Height="600" Width="600"
+        Name="frmTicTacToe"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Grid>
+    </Grid>
+</Window>
