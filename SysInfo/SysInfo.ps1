@@ -1,4 +1,7 @@
-﻿Write-Host $PSScriptRoot
+﻿#Imports and global variables
+$OSWmiObject = Get-WmiObject -Class Win32_OperatingSystem
+$SystemWmiObject = Get-WmiObject -Class Win32_ComputerSystem
+$ProcessorWmiObject = Get-WmiObject -Class Win32_Processor
 
 #Load the XML file
 & "$PSScriptRoot\loadDialog.ps1" -XamlPath "$PSScriptRoot\SysInfo.xaml"
@@ -16,45 +19,31 @@ $frmSysInfo.add_Loaded({
 
 #Functions
 Function LoadOSName {
-	$OSWmiObject = Get-WmiObject -Class Win32_OperatingSystem
-	$OSCaption = $OSWmiObject.Caption
-	$txtOSName.Text = $OSCaption
+	$txtOSName.Text = $OSWmiObject.Caption
 }
 
 Function LoadOSVersion {
-	$OSWmiObject = Get-WmiObject -Class Win32_OperatingSystem
-	$OSVersion = $OSWmiObject.Version
-	$txtOSVersion.Text = $OSVersion
+	$txtOSVersion.Text = $OSWmiObject.Version
 }
 
 Function LoadOSManufacturer {
-	$OSWmiObject = Get-WmiObject -Class Win32_OperatingSystem
-	$OSManufacturer = $OSWmiObject.Manufacturer
-	$txtOSManufacturer.Text = $OSManufacturer
+	$txtOSManufacturer.Text = $OSWmiObject.Manufacturer
 }
 
 Function LoadSystemName {
-	$SystemWmiObject = Get-WmiObject -Class Win32_ComputerSystem
-	$SystemName = $SystemWmiObject.Name
-	$txtSystemName.Text = $SystemName
+	$txtSystemName.Text = $SystemWmiObject.Name
 }
 
 Function LoadSystemManufacturer {
-	$SystemWmiObject = Get-WmiObject -Class Win32_ComputerSystem
-	$SystemManufacturer = $SystemWmiObject.Manufacturer
-	$txtSystemManufacturer.Text = $SystemManufacturer
+	$txtSystemManufacturer.Text = $SystemWmiObject.Manufacturer
 }
 
 Function LoadSystemSKU {
-	$SystemWmiObject = Get-WmiObject -Class Win32_ComputerSystem
-	$SystemSKU = $SystemWmiObject.SystemSKUNumber
-	$txtSystemSKU.Text = $SystemSKU
+	$txtSystemSKU.Text = $SystemWmiObject.SystemSKUNumber
 }
 
 Function LoadSystemModel {
-	$SystemWmiObject = Get-WmiObject -Class Win32_ComputerSystem
-	$SystemModel = $SystemWmiObject.Model
-	$txtModel.Text = $SystemModel
+	$txtModel.Text = $SystemWmiObject.Model
 }
 
 #Show the GUI
