@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SysInfo" Height="480" Width="400"
         ResizeMode="NoResize"
-        Name="frmSysInfo" FontFamily="Comic Sans MS">
-    <Grid>
+        Name="frmSysInfo" FontFamily="Segoe UI">
+    <Grid Margin="10, 10, 10, 10">
         <Label Name="lblOSName" Content="OS Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" />
         <TextBox Name="txtOSName" HorizontalAlignment="Left" Height="23" Margin="115,13,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="200" />
         <Label Name="lblOSVersion" Content="Version" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="100" />
@@ -32,5 +32,6 @@
         <TextBox Name="txtPowershellVersion" HorizontalAlignment="Left" Height="23" Margin="115,317,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="200" />
         <Label Name="lblIEVersion" Content="IE Version" HorizontalAlignment="Left" Margin="10,342,0,0" VerticalAlignment="Top" Width="100" />
         <TextBox Name="txtIEVersion" HorizontalAlignment="Left" Height="23" Margin="115,345,0,0" TextWrapping="Wrap" IsEnabled="False" VerticalAlignment="Top" Width="200" />
+        <Button Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="10,387,0,0" VerticalAlignment="Top" Width="75" />
     </Grid>
 </Window>

@@ -23,6 +23,10 @@ $frmSysInfo.add_Loaded({
 	LoadIEVersion
 })
 
+$btnExit.add_Click({
+	Exit
+})
+
 #Functions
 Function LoadOSName {
 	$txtOSName.Text = $OSWmiObject.Caption
