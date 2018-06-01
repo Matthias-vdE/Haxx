@@ -1,26 +1,31 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="TicTacToe" Height="600" Width="600"
-        x:Name="frmTicTacToe"
+        Name="frmTicTacToe"
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="580" Height="580">
         <Border HorizontalAlignment="Center" BorderThickness="1" BorderBrush="Black" VerticalAlignment="Center" Padding="5,5,5,5">
             <Grid>
-                <TextBox x:Name="txtR1C1" IsReadOnly="True" FontSize="40" Text="X" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,112,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
-                <TextBox x:Name="txtR1C2" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="56,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
-                <TextBox x:Name="txtR1C3" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="111,0,1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
-                <TextBox x:Name="txtR2C1" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,55,112,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
-                <TextBox x:Name="txtR2C2" IsReadOnly="True" FontSize="40" Text="X" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="56,55,56,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
-                <TextBox x:Name="txtR2C3" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="112,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
-                <TextBox x:Name="txtR3C1" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,110,112,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
-                <TextBox x:Name="txtR3C2" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="56,110,56,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
-                <TextBox x:Name="txtR3C3" IsReadOnly="True" FontSize="40" Text="X" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="112,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
+                <TextBox Name="txtR1C1" Focusable="False" IsReadOnly="True" FontSize="40" Text="X" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,112,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
+                <TextBox Name="txtR1C2" Focusable="False" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="56,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
+                <TextBox Name="txtR1C3" Focusable="False" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="111,0,1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
+                <TextBox Name="txtR2C1" Focusable="False" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,55,112,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
+                <TextBox Name="txtR2C2" Focusable="False" IsReadOnly="True" FontSize="40" Text="X" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="56,55,56,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
+                <TextBox Name="txtR2C3" Focusable="False" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="112,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
+                <TextBox Name="txtR3C1" Focusable="False" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,110,112,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
+                <TextBox Name="txtR3C2" Focusable="False" IsReadOnly="True" FontSize="40" Text="O" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="56,110,56,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
+                <TextBox Name="txtR3C3" Focusable="False" IsReadOnly="True" FontSize="40" Text="X" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="112,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
             </Grid>
         </Border>
-        <Label Content="Player 1" HorizontalAlignment="Left" Margin="80,204,0,0" VerticalAlignment="Top" />
-        <Label Content="Player 2" HorizontalAlignment="Left" Margin="460,204,0,0" VerticalAlignment="Top" />
+        <Label Name="lblPlayer1" Content="Player 1 (Using X)" HorizontalAlignment="Left" Margin="44,204,0,0" VerticalAlignment="Top" />
+        <Label Name="lblPlayer2" Content="Player 2 (Using O)" HorizontalAlignment="Left" Margin="437,204,0,0" VerticalAlignment="Top" />
+        <Label Content="Score: " HorizontalAlignment="Left" Margin="44,235,0,0" VerticalAlignment="Top" />
+        <Label Name="lblScorePlayer1" Content="0" HorizontalAlignment="Left" Margin="94,235,0,0" VerticalAlignment="Top" Width="25" />
+        <Label Content="Score: " HorizontalAlignment="Left" Margin="437,235,0,0" VerticalAlignment="Top" />
+        <Label Name="lblScorePlayer2" Content="0" HorizontalAlignment="Left" Margin="487,235,0,0" VerticalAlignment="Top" Width="25" />
+        <Button Name="btnNewGame" Content="New Game" HorizontalAlignment="Left" Margin="203,381,0,0" VerticalAlignment="Top" Width="75" />
+        <Button Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="302,381,0,0" VerticalAlignment="Top" Width="75" />
     </Grid>
 </Window>
