@@ -1,11 +1,11 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        Title="TicTacToe" Height="600" Width="600"
+        Title="TicTacToe" Height="350" Width="500"
         Name="frmTicTacToe"
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
-    <Grid Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="580" Height="580">
+    <Grid Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480" Height="330">
         <Border HorizontalAlignment="Center" BorderThickness="1" BorderBrush="Black" VerticalAlignment="Center" Padding="5,5,5,5">
             <Grid>
                 <TextBox Name="txtR1C1" Focusable="False" IsReadOnly="True" FontSize="40" Text="X" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,112,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
@@ -19,13 +19,14 @@
                 <TextBox Name="txtR3C3" Focusable="False" IsReadOnly="True" FontSize="40" Text="X" Width="50" Height="50" Padding="-10,-10,-10,-5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="112,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" />
             </Grid>
         </Border>
-        <Label Name="lblPlayer1" Content="Player 1 (Using X)" HorizontalAlignment="Left" Margin="44,204,0,0" VerticalAlignment="Top" />
-        <Label Name="lblPlayer2" Content="Player 2 (Using O)" HorizontalAlignment="Left" Margin="437,204,0,0" VerticalAlignment="Top" />
-        <Label Content="Score: " HorizontalAlignment="Left" Margin="44,235,0,0" VerticalAlignment="Top" />
-        <Label Name="lblScorePlayer1" Content="0" HorizontalAlignment="Left" Margin="94,235,0,0" VerticalAlignment="Top" Width="25" />
-        <Label Content="Score: " HorizontalAlignment="Left" Margin="437,235,0,0" VerticalAlignment="Top" />
-        <Label Name="lblScorePlayer2" Content="0" HorizontalAlignment="Left" Margin="487,235,0,0" VerticalAlignment="Top" Width="25" />
-        <Button Name="btnNewGame" Content="New Game" HorizontalAlignment="Left" Margin="203,381,0,0" VerticalAlignment="Top" Width="75" />
-        <Button Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="302,381,0,0" VerticalAlignment="Top" Width="75" />
+        <Label Name="lblPlayer1" Foreground="Red" FontWeight="ExtraBold" Content="Player 1 (Using X)" HorizontalAlignment="Left" Margin="33,80,0,0" VerticalAlignment="Top" />
+        <Label Name="lblPlayer2" Foreground="Blue" Content="Player 2 (Using O)" HorizontalAlignment="Left" Margin="332,80,0,0" VerticalAlignment="Top" />
+        <Label Content="Score: " Foreground="Red" HorizontalAlignment="Left" Margin="33,111,0,0" VerticalAlignment="Top" />
+        <Label Name="lblScorePlayer1" Foreground="Red" Content="0" HorizontalAlignment="Left" Margin="83,111,0,0" VerticalAlignment="Top" Width="26" />
+        <Label Content="Score: " Foreground="Blue" HorizontalAlignment="Left" Margin="332,111,0,0" VerticalAlignment="Top" />
+        <Label Name="lblScorePlayer2" Foreground="Blue" Content="0" HorizontalAlignment="Left" Margin="382,111,0,0" VerticalAlignment="Top" Width="26" />
+        <Button Name="btnNewGame" Content="New Game" HorizontalAlignment="Left" Margin="153,256,0,0" VerticalAlignment="Top" Width="74" />
+        <Button Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="251,256,0,0" VerticalAlignment="Top" Width="76" />
+        <Label Content="Powershell Tic-Tac-Toe" FontSize="30" FontWeight="Bold" Foreground="Orange" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" Height="64" Width="460" />
     </Grid>
 </Window>
