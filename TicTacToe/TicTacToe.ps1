@@ -10,6 +10,7 @@ $SymbolsOnField = 0
 
 #Event handlers
 $frmTicTacToe.add_Loaded({
+	ClearField
 })
 
 $btnNewGame.add_Click({
