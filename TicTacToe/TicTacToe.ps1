@@ -14,7 +14,7 @@ $frmTicTacToe.add_Loaded({
 })
 
 $btnNewGame.add_Click({
-	ClearField
+	ResetGame
 })
 
 $txtR1C1.add_PreviewMouseLeftButtonUp({
@@ -63,6 +63,14 @@ Function ClearField {
 	$txtR3C3.Text = ""
 }
 
+Function ResetGame {
+	ClearField
+	ResetAndIncreasePoints(-1)
+	$global:PlayerTurn = 1
+	$lblPlayer1.FontWeight = "UltraBold"
+	$lblPlayer2.FontWeight = "Normal"
+}
+
 Function DrawSymbol{
 	param (
 		$txtField
@@ -70,11 +78,13 @@ Function DrawSymbol{
 	if ([string]::IsNullOrEmpty($txtField.Text)) {
 		if ($PlayerTurn -eq 1) {
 			$txtField.Text = "X"
+			$txtField.Foreground = "Red"
 			$global:PlayerTurn = 2
 			$lblPlayer2.FontWeight = "UltraBold"
 			$lblPlayer1.FontWeight = "Normal"
 		} else {
 			$txtField.Text = "O"
+			$txtField.Foreground = "Blue"
 			$global:PlayerTurn = 1
 			$lblPlayer1.FontWeight = "UltraBold"
 			$lblPlayer2.FontWeight = "Normal"
@@ -104,16 +114,17 @@ Function ResetAndIncreasePoints {
 	$Global:SymbolsOnField = 0
 	if ($player -eq 1) {
 		$Global:Player1Score += 1
-		$lblScorePlayer1.Content = $Player1Score
 	} elseif ($player -eq 2) {
 		$Global:Player2Score += 1
-		$lblScorePlayer2.Content = $Player2Score
+	} elseif ($player -eq -1) {
+		$Global:Player1Score = 0
+		$Global:Player2Score = 0
 	} else {
 		$Global:Player1Score -= 1
 		$Global:Player2Score -= 1
-		$lblScorePlayer1.Content = $Player1Score
-		$lblScorePlayer2.Content = $Player2Score
 	}
+	$lblScorePlayer1.Content = $Player1Score
+	$lblScorePlayer2.Content = $Player2Score
 }
 
 Function CheckWin {
