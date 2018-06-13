@@ -1,0 +1,19 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Snake" Height="450" Width="450"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Name="frmSnake"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Name="txt00" Text="" Margin="136,151,299,284" TextAlignment="Center" Width="15" Height="15" />
+        <TextBlock Name="txt01" Text="" Margin="151,151,284,284" TextAlignment="Center" Width="15" Height="15" />
+        <TextBlock Name="txt02" Text="" Margin="166,151,269,284" TextAlignment="Center" Width="15" Height="15" />
+        <TextBlock Name="txt10" Text="" Margin="136,166,299,269" TextAlignment="Center" Width="15" Height="15" />
+        <TextBlock Name="txt11" Text="X" Margin="151,166,284,269" TextAlignment="Center" Width="15" Height="15" />
+        <TextBlock Name="txt12" Text="" Margin="166,166,269,269" TextAlignment="Center" Width="15" Height="15" />
+        <TextBlock Name="txt20" Text="" Margin="136,181,299,254" TextAlignment="Center" Width="15" Height="15" />
+        <TextBlock Name="txt21" Text="" Margin="151,181,284,254" TextAlignment="Center" Width="15" Height="15" />
+        <TextBlock Name="txt22" Text="" Margin="166,181,269,254" TextAlignment="Center" Width="15" Height="15" />
+    </Grid>
+</Window>

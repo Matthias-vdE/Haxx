@@ -54,6 +54,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="loadDialog.ps1" />
+    <None Include="Snake.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Snake.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
