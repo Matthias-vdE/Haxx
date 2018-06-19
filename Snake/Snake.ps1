@@ -35,6 +35,7 @@
 #region Functions
 
 	Function NewGameSnake {
+		$Global:GameSnake = $null
 		$Global:GameSnake = [Snake]::new()
 	}
 
@@ -43,12 +44,29 @@
 			[string]$Key
 		)
 		Switch($Key) {
-			"Up" {$Global:GameSnake.ChangeDirection([direction]::North)}
-			"Down" {$Global:GameSnake.ChangeDirection([direction]::South)}
-			"Left" {$Global:GameSnake.ChangeDirection([direction]::West)}
-			"Right" {$Global:GameSnake.ChangeDirection([direction]::East)}			
+			"Up" {$Global:GameSnake.ChangeDirection([direction]::North); $Global:GameSnake.MoveSnake(); RedrawSnake}
+			"Down" {$Global:GameSnake.ChangeDirection([direction]::South); $Global:GameSnake.MoveSnake(); RedrawSnake}
+			"Left" {$Global:GameSnake.ChangeDirection([direction]::West); $Global:GameSnake.MoveSnake(); RedrawSnake}
+			"Right" {$Global:GameSnake.ChangeDirection([direction]::East); $Global:GameSnake.MoveSnake(); RedrawSnake}
 		}
-		Write-Debug $Global:GameSnake.Direction
+	}
+
+	Function RedrawSnake() {
+		$txt00.Text = ""
+		$txt01.Text = ""
+		$txt02.Text = ""
+		$txt10.Text = ""
+		$txt11.Text = ""
+		$txt12.Text = ""
+		$txt20.Text = ""
+		$txt21.Text = ""
+		$txt22.Text = ""
+		$currentpos = $Global:GameSnake.Location
+		Write-Debug "Current Position: $currentpos"
+		$field = "txt$($currentpos[0])$($currentpos[1])"
+		
+		$variables = Get-Variable -Name $field -ValueOnly
+		$variables.Text = "X"
 	}
 
 	Function Show-MessageBox {
