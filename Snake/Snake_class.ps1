@@ -4,13 +4,15 @@
 	[direction]$Direction
 	[speed]$Speed
 	[int[]]$Location
+	[System.Collections.Generic.List[int[]]]$Tail
 
 	# Constructor - Paramterless
 	Snake () {
 		$this.Length = 0
 		$this.Direction = [direction]::Stationary
 		$this.Speed =  [speed]::very_slow
-		$this.Location = (1,1)
+		$this.Location = (4,4)
+		$this.Tail = New-Object System.Collections.Generic.List[int[]]
 	}
 
 	# Constructor
@@ -18,7 +20,8 @@
 		$this.Length = 0
 		$this.Direction = [direction]::Stationary
 		$this.Speed = $Speed
-		$this.Location = (1,1)
+		$this.Location = (4,4)
+		$this.Tail = New-Object System.Collections.Generic.List[int[]]
 	}
 
 	# Change Direction of the Snake
@@ -53,6 +56,8 @@
 	[Void] IncrementLength() {
 		$this.Length += 1
 	}
+
+	# 
 }
 
 Enum direction {
