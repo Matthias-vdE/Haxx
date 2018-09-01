@@ -27,12 +27,19 @@ Function Generate-Password {
 		$txtStrength.Background = "Red"
 	} elseif ($PasswordStrength -eq 1) {
 		$txtStrength.Text = "WEAK"
-		$txtStrength.Background = "Orange"
+		$txtStrength.Background = "RED"
 	} elseif ($PasswordStrength -eq 2) {
 		$txtStrength.Text = "MEH"
-		$txtStrength.Background = "YELLOW"
-	} else {
+		$txtStrength.Background = "ORANGE"
+	} elseif ($PasswordStrength -eq 3) {
+		$txtStrength.Text = "COULD BE BETTER"
+		$txtStrength.Background = "ORANGE"
+	} elseif ($PasswordStrength -eq 4) {
 		$txtStrength.Text = "OK"
+		$txtStrength.Background = "GREEN"
+	}
+	else {
+		$txtStrength.Text = "GREAT"
 		$txtStrength.Background = "GREEN"
 	}
 }
@@ -103,10 +110,7 @@ Function Get-PasswordStrength {
     Checks the strength of a password.
     .DESCRIPTION
     Checks the strength of a password. Solely based on the length.
-    Passwords less than or equal to 3 characters long get a rating of 0.
-    Passwords between 4 and 6 characters long get a rating of 1.
-    Passwords between 7 and 9 characters long get a rating of 2.
-    Passwords more than or equal to 10 characters long get a rating of 3.
+	Graded from 0 (very bad, less than 3) to 5 (very good, more than 15). 
     .EXAMPLE
     PS C:\> Get-PasswordStrength -Password 123
     This password will get a strength rating of 0.
@@ -130,9 +134,15 @@ Function Get-PasswordStrength {
     elseif (($Password.Length -gt 6) -and ($Password.Length -le 9)) {
         $Strength = 2
     }
-    else {
+    elseif (($Password.Length -gt 9) -and ($Password.Length -le 12)) {
         $Strength = 3
     }
+	elseif (($Password.Length -gt 12) -and ($Password.Length -le 15)) {
+        $Strength = 4
+    } 
+	else {
+		$strength = 5
+	}
     return $Strength
 }
 
