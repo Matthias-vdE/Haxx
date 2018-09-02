@@ -10,6 +10,14 @@ $sldLength.add_ValueChanged({
 	Generate-Password
 })
 
+$chkNumerical.add_Checked({
+	Generate-Password
+})
+
+$chkNumerical.add_Unchecked({
+	Generate-Password
+})
+
 #Functions
 Function Generate-Password {
 	$length = [int]$sldLength.Value
