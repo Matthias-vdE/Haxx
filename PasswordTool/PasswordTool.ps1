@@ -151,6 +151,11 @@ Function Get-PasswordStrength {
 	else {
 		$strength = 5
 	}
+	if ($Password -match '^[a-zA-Z0-9]+$') {
+		If ($Strength -gt 0) {
+			$Strength -= 1;
+		}
+	}
     return $Strength
 }
 
