@@ -28,27 +28,14 @@ Function Generate-Password {
 		$Password = Get-RandomPassword -Length $length
 	}
 	$txtPassword.Text = $Password
-
 	$PasswordStrength = Get-PasswordStrength $Password
-	if ($PasswordStrength -eq 0) {
-		$txtStrength.Text = "SUPER WEAK!"
-		$txtStrength.Background = "Red"
-	} elseif ($PasswordStrength -eq 1) {
-		$txtStrength.Text = "WEAK"
-		$txtStrength.Background = "RED"
-	} elseif ($PasswordStrength -eq 2) {
-		$txtStrength.Text = "MEH"
-		$txtStrength.Background = "ORANGE"
-	} elseif ($PasswordStrength -eq 3) {
-		$txtStrength.Text = "COULD BE BETTER"
-		$txtStrength.Background = "ORANGE"
-	} elseif ($PasswordStrength -eq 4) {
-		$txtStrength.Text = "OK"
-		$txtStrength.Background = "GREEN"
-	}
-	else {
-		$txtStrength.Text = "GREAT"
-		$txtStrength.Background = "GREEN"
+	switch($PasswordStrength) {
+		0 {$txtStrength.Text = "SUPER WEAK!"; $txtStrength.Background = "Red"}
+		1 {$txtStrength.Text = "WEAK"; $txtStrength.Background = "Red"}
+		2 {$txtStrength.Text = "MEH"; $txtStrength.Background = "Orange"}
+		3 {$txtStrength.Text = "COULD BE BETTER"; $txtStrength.Background = "Orange"}
+		4 {$txtStrength.Text = "OK"; $txtStrength.Background = "Green"}
+		5 {$txtStrength.Text = "GRRRRRREAT!"; $txtStrength.Background = "Green"}
 	}
 }
 
